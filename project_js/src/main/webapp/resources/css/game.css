@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+#container {
+    width: 60%;
+    margin: auto;
+}
+
+#info {
+    display: flex;
+    gap: 10px; /* Child 간 간격 */
+    padding: 2px;
+    background: #f0f8ff; /* 부드러운 배경 */
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+}
+
+#info > div {
+    flex: 1; /* 동일한 너비 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* 조금 더 넉넉한 높이 */
+    margin: 5px;
+    font-size: 16px; /* 읽기 쉬운 크기 */
+    font-weight: bold;
+    color: #333; /* 텍스트 색상 */
+    border-radius: 8px; /* 둥근 모서리 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 애니메이션 */
+}
+
+#game {
+    margin-top: 10px;
+    height: 600px; /* 게임 영역의 높이를 정의 */
+    overflow: hidden; /* 게임 영역을 벗어나는 캐릭터가 보이지 않도록 설정 */
+    position: relative; /* #game 영역의 기준을 설정 */
+    background-image: url('/resources/images/grass.png');
+    background-size: cover; /* 이미지가 div 크기에 맞게 조정됩니다 */
+    background-position: center; /* 이미지가 div 중앙에 위치하도록 설정 */
+}
+
+#character {
+    position: absolute;
+}
+
+.hitbox {
+    position: absolute;
+    border: 2px dashed red; /* 히트박스 시각화 */
+    pointer-events: none; /* 클릭 불가능하게 설정 */
+    z-index: 1;
+}
+
+.hit-effect {
+	position: absolute;
+	z-index: 1000;
+	animation: fade-out 1.5s ease-out forwards;
+}

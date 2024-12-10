@@ -1,0 +1,85 @@
+@charset "UTF-8";
+	
+
+#container {
+	width: 60%;
+	margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.monster {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.monster-image {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.monster h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.monster p {
+    margin: 5px 0;
+}
+
+.description {
+    font-style: italic;
+    color: #555;
+}
+
+button {
+	display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    background-color: red; /* 버튼 배경을 빨간색으로 변경 */
+    color: white;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: auto;
+}
+
+button:hover {
+    animation: jelly 0.5s ease-in-out;
+}
+
+@keyframes jelly {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.1, 0.9);
+    }
+    50% {
+        transform: scale(0.9, 1.1);
+    }
+    75% {
+        transform: scale(1.1, 0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f4f4f4;
+}
+
+h1 {
+	font-size: 48px;
+    margin: 0;
+    position: absolute;
+    top: 30px; /* 원하는 높이 설정 */
+    left: 16%;
+    transform: translateX(-50%);
+}
+
+#container {
+	display: flex;
+	width: 80%;
+	height: 70%;
+	background: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-top: 20px;
+}
+
+#imgContainer {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #e0e0e0;
+}
+
+#imgContainer img {
+	max-width: 50%;
+	max-height: 90%;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+#infoContainer {
+	flex: 1;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	justify-content: center;
+	background-color: #ffffff;
+}
+
+/* 개별 p 태그 아이디 */
+#nickname, #job, #score {
+	font-size: 20px;
+	margin: 15px 0;
+}
+
+#nickname {
+	font-weight: bold;
+	font-size: 22px;
+	color: #333;
+}
+
+#job {
+	font-size: 20px;
+	color: #666;
+}
+
+#score {
+	font-size: 60px;
+	font-weight: bold;
+	color: #f44336; /* 빨간색 */
+}
+
+
+/* 버튼 기본 스타일 */
+.btn-home {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #808080; /* 빨간색 */
+  color: white;
+  border-radius: 12px; /* 둥근 모서리 */
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 호버 시 Jelly 애니메이션 */
+.btn-home:hover {
+  animation: jelly 0.5s ease-in-out;
+}
+
+@keyframes jelly {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1, 0.9);
+  }
+  50% {
+    transform: scale(0.9, 1.1);
+  }
+  75% {
+    transform: scale(1.1, 0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 버튼 안의 아이콘을 위한 스타일 (필요시 추가) */
+.btn-home .btn-icon {
+  margin-left: 8px;
+  position: relative;
+  display: inline-block;
+  transition: 0.2s;
+}
+
+.btn-home:hover .btn-icon {
+  transform: translateY(-4px);
+}
+
+/* 버튼 클릭 시 효과 */
+.btn-home:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 버튼의 텍스트 애니메이션 */
+@keyframes move-left {
+  to {
+    transform: translateX(-100%);
+  }
+}
